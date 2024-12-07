@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<!-- Exp - 1 and 2 -->
+		<mapping class="com.jfsd_lab.exp1.Student" />
+		<!-- Exp - 3 P - 1 -->
+		<mapping class="com.jfsd_lab.exp3.p1.Book" />
+		<mapping class="com.jfsd_lab.exp3.p1.DVD" />
+		<mapping class="com.jfsd_lab.exp3.p1.Item" />
+
+		<!-- Exp - 3 P - 2 -->
+		<mapping class="com.jfsd_lab.exp3.p2.Vehicle" />
+		<mapping class="com.jfsd_lab.exp3.p2.Car" />
+		<mapping class="com.jfsd_lab.exp3.p2.Bike" />
+		
+		<!-- Exp - 3 P - 3 -->
+		<mapping class="com.jfsd_lab.exp3.p3.Product"/>
+        <mapping class="com.jfsd_lab.exp3.p3.Electronics"/>
+        <mapping class="com.jfsd_lab.exp3.p3.Clothing"/>
+	</session-factory>
+</hibernate-configuration>
